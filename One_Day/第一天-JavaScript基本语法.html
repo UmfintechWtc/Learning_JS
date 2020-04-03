@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>wtc learn JavaScript</title>
+		<style type="text/css">
+			p {
+				color:red;
+				text-align: center;
+			}
+			#h {
+				text-align: center;
+				color: orange
+			}
+			#p {
+				text-align: center;
+				color: red
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="h">练习JavaScript，直接写入HTML，CSS样式</h1>
+		<script type="text/javascript">
+			document.write("<p id='p'>This is wtc first JavaScript</p>")
+			document.write("<strong><p>这是一个段落，只能在HTML中使用document.write，采用html样式</p></strong>")
+		</script>
+		<hr>
+
+		<h1 id="h">练习JavaScript，对事件的反应，CSS样式</h1>
+		<button type="button" onclick="alert('wtc ls learning js，welcome')">Check Me</button>
+		<strong><p>如何把Check Me居中，is there，采用html样式</p></strong>
+		<hr>
+
+		<h1 id="h">练习JavaScript，改变HTML元素内容，CSS样式</h1>
+		<strong><p id="num1">Oh No，He is not interesting</p></strong>
+		<script type="text/javascript">
+			function WTCFUN(){
+				// 基于 ID 找到元素
+				inc1=document.getElementById("num1");
+				// 改变元素内容
+				inc1.innerHTML="Weclome wtc，He is Learning JavaScript"
+			}
+		</script>
+		<button type="button" onclick="WTCFUN()">点击这里</button>
+		<hr>
+
+		<script>
+		function changeimage()
+		{
+			element=document.getElementById('wtcimage')
+			if (element.src.match("boy"))
+			{
+				element.src="./Picture/girl.jpg";
+			}
+			else
+			{
+				element.src="./Picture/boy.jpg";
+			}
+		}
+		</script>
+		<img id="wtcimage" onclick="changeimage()" src="./Picture/girl.jpg" width="100" height="100">
+		<p>点击图片即可切换</p>
+		<hr>
+
+		<h1 id="h">练习JavaScript，改变html样式，CSS样式</h1>
+		<p id="num2">Write JavaScript for the first time</p>
+		<script type="text/javascript">
+			function WTCFUN1(){
+				// 基于 ID 扎到元素
+				inc2=document.getElementById("num2");
+				// 改变元素的样式
+				inc2.style.color="blue";
+			}
+		</script>
+		<button type="button" onclick="WTCFUN1()">Please Check Me</button>
+		<strong><p>改变num2 段落的样式</p></strong>
+		<hr>
+
+		<h1 id="h">练习JavaScript，验证输入</h1>
+		<strong><p>请输入次页面的作者</p></strong>
+		UserName: <input id="num3" type="text" name="user"><br>
+		Password: <input id="num4" type="password" name="password"><br>
+		<script type="text/javascript">
+			function WTCFUN2(){
+				var inc3=document.getElementById("num3").value;
+				var inc4=document.getElementById("num4").value;
+				if (inc3 == "wtc" && inc4 == "wtc" )
+				{
+					alert("登录成功")
+				}
+				else
+				{
+					alert("用户名、密码错误，请重试")	
+				}
+			}
+		</script>
+		<button type="button" onclick="WTCFUN2()">请登录</button>
+	</body>
+</html>
