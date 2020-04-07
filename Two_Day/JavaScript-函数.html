@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>wtc learning JavaScript</title>
+		<style type="text/css">
+			#wtc {
+				text-align: center;
+				color: red;
+			}
+
+			h {
+				text-align: center;
+				color: orange;
+			}
+		</style>
+	</head>
+	<h1 id="h">JavaScript函数进阶，传参执行一个计算</h1>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function fun1(a,b) {
+			return a*b;
+		}
+		document.getElementById("demo").innerHTML=fun1(4,3);
+	</script>
+	<hr>
+	<h1 id="h">JavaScript函数进阶，如果"name" == "wangtianci" and password == "wangtianci"，则返回"登录成功"，否则"登录失败"</h1>
+	<p id="demo2"></p>
+	username: <input id="demo3" type="text" name="user"><br>
+	password: <input id="demo4" type="text" name="password"><br>
+	<script type="text/javascript">
+		function fun2(){
+			var username=document.getElementById("demo3").value;
+			var password=document.getElementById("demo4").value;
+			if (  username == "wangtianci" && password == "wangtianci" ){
+				alert("登录成功");
+			}
+			else {
+				alert("登录失败");
+			}
+		}
+	</script>
+	<button type="button" onclick="fun2()">点击登录</button>
+	<hr>
+	<h1 id="h">JavaScrip函数进阶，return返回</h1>
+	<p id="demo5"></p>
+	<script type="text/javascript">
+		function fun3(a,b) {
+			if ( a >= b ) {
+				return a+b;
+			}
+			else {
+				return a*b;
+			}
+		}
+		document.getElementById("demo5").innerHTML=fun3(5,5)
+	</script>
+</html>
